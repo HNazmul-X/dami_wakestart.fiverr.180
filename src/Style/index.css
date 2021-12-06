@@ -6,6 +6,8 @@
   --purple-2: #8250ff;
   --purple1-to-purple2: linear-gradient(270deg, #9a75ff, #8250ff);
   --black:black;
+  --body-black:#1a1b25;
+  --blue-grey:#7c7fa0 ;
 }
 
 .text-white {
@@ -24,12 +26,28 @@
   background: var(--muted-black);
 }
 
+.text-blue-grey {
+  color: var(--blue-grey);
+}
+
+.bg-blue-grey {
+  background: var(--blue-grey);
+}
+
 .text-purple {
   color: var(--purple);
 }
 
 .bg-purple {
   background: var(--purple);
+}
+
+.text-body-black {
+  color: var(--body-black);
+}
+
+.bg-body-black {
+  background: var(--body-black);
 }
 
 .text-purple-2 {
@@ -107,6 +125,8 @@
   --purple-2: #8250ff;
   --purple1-to-purple2: linear-gradient(270deg, #9a75ff, #8250ff);
   --black:black;
+  --body-black:#1a1b25;
+  --blue-grey:#7c7fa0 ;
 }
 
 .text-white {
@@ -125,12 +145,28 @@
   background: var(--muted-black);
 }
 
+.text-blue-grey {
+  color: var(--blue-grey);
+}
+
+.bg-blue-grey {
+  background: var(--blue-grey);
+}
+
 .text-purple {
   color: var(--purple);
 }
 
 .bg-purple {
   background: var(--purple);
+}
+
+.text-body-black {
+  color: var(--body-black);
+}
+
+.bg-body-black {
+  background: var(--body-black);
 }
 
 .text-purple-2 {
@@ -241,6 +277,45 @@
   transition: 0.7s !important;
 }
 
+.endless-card {
+  background: #232532;
+  padding: 10px;
+  border-radius: 15px;
+  border: 2px solid #232532;
+}
+.endless-card:hover {
+  background: #1d1e29;
+  border-color: #383b50;
+}
+.endless-card .desc p {
+  color: #7c7fa0;
+  font-weight: 600;
+}
+
+.image-and-section {
+  padding: 2rem 0;
+}
+.image-and-section .image-and-section__image img {
+  width: 100%;
+}
+.image-and-section .image-and-section__wrapper .image-and-section__desc {
+  padding: 1.3rem;
+}
+.image-and-section .image-and-section__wrapper .image-and-section__desc .subtitle {
+  margin-top: 2rem;
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+.image-and-section .image-and-section__wrapper .image-and-section__desc .list {
+  margin-top: 2rem;
+}
+.image-and-section .image-and-section__wrapper .image-and-section__desc .list li {
+  font-size: 22px;
+  font-weight: 600;
+}
+
 * {
   font-family: "Montserrat", sans-serif;
 }
@@ -254,6 +329,10 @@
   align-items: center;
 }
 
+#opportunities {
+  padding: 4rem 0px;
+}
+
 :root {
   --white: #ffffff;
   --muted-black: #232532;
@@ -261,6 +340,8 @@
   --purple-2: #8250ff;
   --purple1-to-purple2: linear-gradient(270deg, #9a75ff, #8250ff);
   --black:black;
+  --body-black:#1a1b25;
+  --blue-grey:#7c7fa0 ;
 }
 
 .text-white {
@@ -279,12 +360,28 @@
   background: var(--muted-black);
 }
 
+.text-blue-grey {
+  color: var(--blue-grey);
+}
+
+.bg-blue-grey {
+  background: var(--blue-grey);
+}
+
 .text-purple {
   color: var(--purple);
 }
 
 .bg-purple {
   background: var(--purple);
+}
+
+.text-body-black {
+  color: var(--body-black);
+}
+
+.bg-body-black {
+  background: var(--body-black);
 }
 
 .text-purple-2 {
@@ -483,5 +580,8 @@
     background:
 } 
  */
+body {
+  background: #1a1b25;
+}
 
 /*# sourceMappingURL=index.css.map */

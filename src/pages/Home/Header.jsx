@@ -5,6 +5,17 @@ import "swiper/css";
 import "swiper/css/pagination";
 import SwiperCore, { Autoplay } from "swiper";
 import AMAZON from "../../Images/Amazon.png";
+import BESTBUY from "../../Images/BestBuy.png";
+import WALMART from "../../Images/Walmart.png";
+import TARGET from "../../Images/Target.png";
+import SOLEBOX from "../../Images/Solebox.png";
+import SNS from "../../Images/SNS.png";
+import SNKRS from "../../Images/SNKRS.png";
+import MESH from "../../Images/Mesh.png";
+import INSTAGRAM from "../../Images/Instagram.png";
+import TWITTER from "../../Images/Twitter.png";
+import SHOPIFY from "../../Images/Shopify.png";
+import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 
 SwiperCore.use([Autoplay]);
 
@@ -15,34 +26,54 @@ const fastest_monitor_data = [
         text: "covering GPU's Consoles and More",
     },
     {
-        image: AMAZON,
-        title: "Amazon",
+        image: BESTBUY,
+        title: "BestBuy",
         text: "covering GPU's Consoles and More",
     },
     {
-        image: AMAZON,
-        title: "Amazon",
+        image: WALMART,
+        title: "Walmart",
         text: "covering GPU's Consoles and More",
     },
     {
-        image: AMAZON,
-        title: "Amazon",
+        image: TARGET,
+        title: "Target",
         text: "covering GPU's Consoles and More",
     },
     {
-        image: AMAZON,
-        title: "Amazon",
-        text: "covering GPU's Consoles and More",
+        image: SOLEBOX,
+        title: "Solebox",
+        text: "Consistent pickups and ATC links.",
     },
     {
-        image: AMAZON,
-        title: "Amazon",
-        text: "covering GPU's Consoles and More",
+        image: SNS,
+        title: "SneakersNStuff",
+        text: "Fast speeds. Manual success.",
     },
     {
-        image: AMAZON,
-        title: "Amazon",
-        text: "covering GPU's Consoles and More",
+        image: MESH,
+        title: "Mesh",
+        text: "Multiple consistent providers.",
+    },
+    {
+        image: SNKRS,
+        title: "SNKRS",
+        text: "Shock drops, passes, etc..",
+    },
+    {
+        image: INSTAGRAM,
+        title: "Instagram",
+        text: "Consistent. Fast. Reliable.",
+    },
+    {
+        image: TWITTER,
+        title: "Twitter",
+        text: "The success speaks for itself.",
+    },
+    {
+        image: SHOPIFY,
+        title: "Shopify",
+        text: "Covering 200+ unique sites",
     },
 ];
 
@@ -71,9 +102,7 @@ const Header = () => {
             </div>
             {/* FASTEST MONITOR */}
             <div className="fastest-monitor">
-                <div className="container">
-                    <h1 className="text-light display-5 fw-bold mb-5">The Fastest Monitor</h1>
-                </div>
+                <SectionTitle text={"Fastest Monitor"}/>
                 <div className=" ps-1 ps-md-3 ps-md-5">
                     <Swiper
                         slidesPerView={"auto"}

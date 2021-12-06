@@ -6,6 +6,7 @@ $purple1-to-purple2: linear-gradient(270deg, $purple, $purple-2);
 $btn-shadow:#0e0a1f40 0px 16px 49px;;
 $black:black;
 $blue-gray:#7c7fa0;
+$body-black:#1a1b25;
 
 :root {
     --white: #{$white};
@@ -14,9 +15,11 @@ $blue-gray:#7c7fa0;
     --purple-2: #{$purple-2};
     --purple1-to-purple2: #{$purple1-to-purple2};
     --black:#{$black};
+    --body-black:#{$body-black};
+    --blue-grey:#{$blue-gray}
 }
 
-$var-list: white, muted-black, purple, purple-2, purple1-to-purple2,black;
+$var-list: white, muted-black, blue-grey, purple, body-black, purple-2, purple1-to-purple2,black;
 
 
 @each $var in $var-list {

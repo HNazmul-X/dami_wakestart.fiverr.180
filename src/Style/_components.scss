@@ -43,3 +43,49 @@
         }
     }
 }
+
+.endless-card{
+    background:$muted-black;
+    padding:10px;
+    border-radius: 15px;
+    border: 2px solid $muted-black;
+    &:hover{
+        background: darken($color:$muted-black, $amount: 3);
+        border-color: lighten($color: $muted-black, $amount: 10);
+    }
+    .desc{
+        p{
+            color:$blue-gray;
+            font-weight: 600;
+        }
+    }
+}
+
+.image-and-section{
+    padding: 2rem 0;
+    .image-and-section__image{
+        img{
+            width: 100%;
+        }
+    }
+    .image-and-section__wrapper{
+
+        .image-and-section__desc{
+            padding: 1.3rem;
+            .subtitle{
+                margin-top: 2rem;
+                font-size: 20px;
+                line-height: 1.3;
+                font-weight: 600;
+                letter-spacing: -1px;
+            }
+            .list{
+                margin-top: 2rem;
+                li{
+                    font-size: 22px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

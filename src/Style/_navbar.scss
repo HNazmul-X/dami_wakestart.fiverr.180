@@ -20,6 +20,7 @@
             display: none;
             button {
                 border: none;
+                background: transparent
             }
             img.toggler-btn {
                 width: 20px;
@@ -75,8 +76,6 @@
             @media screen and (max-width: 650px) {
                 padding: 0 10px;
             }
-            .hnazmul-nav-logo {
-            }
             .hnazmul-nav-toggle-btn {
                 display: block;
                 margin-left: auto;
@@ -87,14 +86,13 @@
                 z-index: 500;
                 height: 100%;
                 width: 100%;
-                background: rgba(33, 35, 36, 0.479);
                 top: 0px;
-                left: -120%;
+                right: -120%;
                 transition: 0.6s;
                 clip-path: circle(0.2% at 0 0);
+                clip-path: circle(141.4% at 0 0);
                 &.navbar-show {
-                    left: 0px;
-                    clip-path: circle(141.4% at 0 0);
+                    right: 0px;
                 }
                 .hnazmul-navbar-content-wrapper {
                     width: 100%;
@@ -102,11 +100,23 @@
                     position: relative;
                     ul.navbar-list {
                         display: block;
-                        background:rgb(211, 226, 214);
+                        background:$body-black;
                         width:80%;
+                        padding-left: 0px;
+                        display: flex;
+                        flex-flow: column;
+                        justify-content: center;
                         li.navbar-list-item {
-                            text-align: center;
+                            text-align: left;
                             .navbar-list-link {
+                                border-bottom: 2px solid darken($color: $blue-gray, $amount: 30);;
+                                width: 100%;;
+                                margin-bottom: 10px;
+                                transition: 0.5s;
+                                &:hover{
+                                    transform: translateY(-20px);
+                                }
+
                             }
                         }
                     }
@@ -116,12 +126,10 @@
                         right:10px;
                         padding:10px;
                         display: block;
-                        background:white;
+                        background:$muted-black;
                         border-radius: 50%;
                         &:hover{
                             background:rgb(255, 0, 85);
-                        }
-                        img.navbar-closer {
                         }
                     }
                 }

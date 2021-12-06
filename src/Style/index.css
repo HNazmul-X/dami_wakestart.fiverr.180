@@ -7,7 +7,7 @@
   --purple1-to-purple2: linear-gradient(270deg, #9a75ff, #8250ff);
   --black:black;
   --body-black:#1a1b25;
-  --blue-grey:#7c7fa0 ;
+  --blue-grey:#7c7fa0;
 }
 
 .text-white {
@@ -116,6 +116,10 @@
 
 * {
   color: #ffffff;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 :root {
@@ -126,7 +130,7 @@
   --purple1-to-purple2: linear-gradient(270deg, #9a75ff, #8250ff);
   --black:black;
   --body-black:#1a1b25;
-  --blue-grey:#7c7fa0 ;
+  --blue-grey:#7c7fa0;
 }
 
 .text-white {
@@ -235,6 +239,10 @@
 
 * {
   color: #ffffff;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 .fastest-monitor {
@@ -295,6 +303,11 @@
 .image-and-section {
   padding: 2rem 0;
 }
+@media screen and (max-width: 992px) {
+  .image-and-section .image-and-section__image {
+    order: 0 !important;
+  }
+}
 .image-and-section .image-and-section__image img {
   width: 100%;
 }
@@ -314,6 +327,74 @@
 .image-and-section .image-and-section__wrapper .image-and-section__desc .list li {
   font-size: 22px;
   font-weight: 600;
+}
+
+#Faq-card {
+  padding: 10px;
+  background: #232532;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+#Faq-card .faq-label {
+  font-size: 23px;
+  font-weight: 600;
+  padding: 10px;
+  cursor: pointer;
+}
+#Faq-card .faq-label:hover {
+  background: #21232f;
+  border-radius: inherit;
+}
+#Faq-card .faq-label .icon {
+  background: radial-gradient(#9a75ff 25%, #4f0fff);
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+#Faq-card .faq-label .icon .line {
+  width: 50%;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 20px;
+  position: absolute;
+}
+#Faq-card .faq-label .icon .line.line-2 {
+  transform: rotate(90deg) translateX(-10px);
+  opacity: 0;
+  transition: 0.4s;
+}
+#Faq-card .faq-label .icon.active .line.line-2 {
+  transform: rotate(90deg) translate(0px);
+  opacity: 1;
+}
+#Faq-card .faq-description {
+  font-size: 1.2rem;
+  font-weight: 500;
+  max-height: 0px;
+  transition: 0.5s;
+  overflow: hidden;
+}
+#Faq-card .faq-description .content {
+  color: #7c7fa0;
+  padding: 10px;
+}
+
+#footer {
+  height: 60vh;
+  background: url("../Images/FOOTER_BG.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer p {
+  margin-bottom: 0px;
+  font-weight: 500;
 }
 
 * {
@@ -341,7 +422,7 @@
   --purple1-to-purple2: linear-gradient(270deg, #9a75ff, #8250ff);
   --black:black;
   --body-black:#1a1b25;
-  --blue-grey:#7c7fa0 ;
+  --blue-grey:#7c7fa0;
 }
 
 .text-white {
@@ -452,6 +533,10 @@
   color: #ffffff;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .hnazmul-navbar {
   padding: 30px 10px;
   display: flex;
@@ -474,6 +559,7 @@
 }
 .hnazmul-navbar .hnazmul-navbar-container .hnazmul-nav-toggle-btn button {
   border: none;
+  background: transparent;
 }
 .hnazmul-navbar .hnazmul-navbar-container .hnazmul-nav-toggle-btn img.toggler-btn {
   width: 20px;
@@ -539,15 +625,14 @@
     z-index: 500;
     height: 100%;
     width: 100%;
-    background: rgba(33, 35, 36, 0.479);
     top: 0px;
-    left: -120%;
+    right: -120%;
     transition: 0.6s;
     clip-path: circle(0.2% at 0 0);
+    clip-path: circle(141.4% at 0 0);
   }
   .hnazmul-navbar .hnazmul-navbar-container .hnazmul-navbar-content.navbar-show {
-    left: 0px;
-    clip-path: circle(141.4% at 0 0);
+    right: 0px;
   }
   .hnazmul-navbar .hnazmul-navbar-container .hnazmul-navbar-content .hnazmul-navbar-content-wrapper {
     width: 100%;
@@ -556,11 +641,24 @@
   }
   .hnazmul-navbar .hnazmul-navbar-container .hnazmul-navbar-content .hnazmul-navbar-content-wrapper ul.navbar-list {
     display: block;
-    background: #d3e2d6;
+    background: #1a1b25;
     width: 80%;
+    padding-left: 0px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
   }
   .hnazmul-navbar .hnazmul-navbar-container .hnazmul-navbar-content .hnazmul-navbar-content-wrapper ul.navbar-list li.navbar-list-item {
-    text-align: center;
+    text-align: left;
+  }
+  .hnazmul-navbar .hnazmul-navbar-container .hnazmul-navbar-content .hnazmul-navbar-content-wrapper ul.navbar-list li.navbar-list-item .navbar-list-link {
+    border-bottom: 2px solid #37394c;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: 0.5s;
+  }
+  .hnazmul-navbar .hnazmul-navbar-container .hnazmul-navbar-content .hnazmul-navbar-content-wrapper ul.navbar-list li.navbar-list-item .navbar-list-link:hover {
+    transform: translateY(-20px);
   }
   .hnazmul-navbar .hnazmul-navbar-container .hnazmul-navbar-content .hnazmul-navbar-content-wrapper button.navbar-closer-icon {
     position: absolute;
@@ -568,7 +666,7 @@
     right: 10px;
     padding: 10px;
     display: block;
-    background: white;
+    background: #232532;
     border-radius: 50%;
   }
   .hnazmul-navbar .hnazmul-navbar-container .hnazmul-navbar-content .hnazmul-navbar-content-wrapper button.navbar-closer-icon:hover {

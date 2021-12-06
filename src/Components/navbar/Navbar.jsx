@@ -21,7 +21,7 @@ const Navbar = () => {
 
                         <div className={`hnazmul-navbar-content ${IsContentShow ? "navbar-show" : ""}`}>
                             <div className="hnazmul-navbar-content-wrapper">
-                                <ul className="navbar-list">
+                                <ul onClick={()=> setIsContentShow(false)} className="navbar-list">
                                     <li className="navbar-list-item">
                                         <NavLink to="#" className="navbar-list-link">
                                             Home

@@ -5,14 +5,13 @@ import SectionTitle from '../../Components/SectionTitle/SectionTitle';
 const CustomTools = () => {
     return (
         <section id="custom-tools">
-            <SectionTitle text="Custom Tools"/>
+            <SectionTitle text="Custom Tools" />
             <div className="container">
-                <ImageAndDescSection/>
-                <ImageAndDescSection/>
-                <ImageAndDescSection/>
-                <ImageAndDescSection/>
+                <ImageAndDescSection />
+                <ImageAndDescSection rightOrder={0} leftOrder={1} />
+                <ImageAndDescSection />
+                <ImageAndDescSection rightOrder={0} leftOrder={1} />
             </div>
-            
         </section>
     );
 };

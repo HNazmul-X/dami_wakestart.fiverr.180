@@ -5,9 +5,9 @@
     .fastest-monitor_card {
         width: 400px;
         margin-bottom: 2rem;
-        background: transparentize($color: lighten($blue-gray,10), $amount: 0.9);
+        background: transparentize($color: lighten($blue-gray, 10), $amount: 0.9);
         border-radius: 10px;
-        @media screen and (max-width:450px) {
+        @media screen and (max-width: 450px) {
             width: 350px;
         }
         .fastest-monitor_card_wrapper {
@@ -44,48 +44,126 @@
     }
 }
 
-.endless-card{
-    background:$muted-black;
-    padding:10px;
+.endless-card {
+    background: $muted-black;
+    padding: 10px;
     border-radius: 15px;
     border: 2px solid $muted-black;
-    &:hover{
-        background: darken($color:$muted-black, $amount: 3);
+    &:hover {
+        background: darken($color: $muted-black, $amount: 3);
         border-color: lighten($color: $muted-black, $amount: 10);
     }
-    .desc{
-        p{
-            color:$blue-gray;
+    .desc {
+        p {
+            color: $blue-gray;
             font-weight: 600;
         }
     }
 }
 
-.image-and-section{
+.image-and-section {
     padding: 2rem 0;
-    .image-and-section__image{
-        img{
+    .image-and-section__image {
+        @media screen and (max-width:992px) {
+            order: 0 !important;
+        }
+
+        img {
             width: 100%;
         }
     }
-    .image-and-section__wrapper{
-
-        .image-and-section__desc{
+    .image-and-section__wrapper {
+        .image-and-section__desc {
             padding: 1.3rem;
-            .subtitle{
+            .subtitle {
                 margin-top: 2rem;
                 font-size: 20px;
                 line-height: 1.3;
                 font-weight: 600;
                 letter-spacing: -1px;
             }
-            .list{
+            .list {
                 margin-top: 2rem;
-                li{
+                li {
                     font-size: 22px;
                     font-weight: 600;
                 }
             }
         }
+    }
+}
+
+#Faq-card {
+    padding: 10px;
+    background: $muted-black;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    .faq-label {
+        font-size: 23px;
+        font-weight: 600;
+        padding: 10px;
+        cursor: pointer;
+        &:hover {
+            background: darken($muted-black, 1);
+            border-radius: inherit;
+        }
+        .icon {
+            background: radial-gradient($purple 25%, darken($purple, 20));
+            width: 40px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            border-radius: 50%;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+
+            .line {
+                width: 50%;
+                height: 3px;
+                background: $white;
+                border-radius: 20px;
+
+                position: absolute;
+
+                &.line-2 {
+                    transform: rotate(90deg) translateX(-10px);
+                    opacity: 0;
+                    transition: 0.4s;
+                }
+            }
+            &.active {
+                .line {
+                    &.line-2 {
+                        transform: rotate(90deg) translate(0px);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    .faq-description {
+        font-size: 1.2rem;
+        font-weight: 500;
+        max-height: 0px;
+        transition: 0.5s;
+        overflow: hidden;
+        .content {
+            color: $blue-gray;
+            padding: 10px;
+        }
+    }
+}
+
+#footer {
+    height: 60vh;
+    background: url("../Images/FOOTER_BG.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        margin-bottom: 0px;
+        font-weight: 500;
     }
 }

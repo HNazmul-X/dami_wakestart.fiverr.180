@@ -16,7 +16,7 @@ $body-black:#1a1b25;
     --purple1-to-purple2: #{$purple1-to-purple2};
     --black:#{$black};
     --body-black:#{$body-black};
-    --blue-grey:#{$blue-gray}
+    --blue-grey:#{$blue-gray};
 }
 
 $var-list: white, muted-black, blue-grey, purple, body-black, purple-2, purple1-to-purple2,black;
@@ -45,3 +45,6 @@ $var-list: white, muted-black, blue-grey, purple, body-black, purple-2, purple1-
     color: $white;
 }
 
+body{
+    overflow-x: hidden;
+}

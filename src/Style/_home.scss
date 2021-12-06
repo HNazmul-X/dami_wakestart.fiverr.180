@@ -1,0 +1,13 @@
+#header{
+    background:url("../Images/HEADER_BG_DESKTOP.jpg") no-repeat  center top / cover ;
+    // background-size:cover;
+
+    
+
+    .header-content{
+        min-height:calc(100vh - 160px);
+        display: flex;
+        align-items: center;
+
+    }
+}

@@ -1,26 +1,38 @@
 import React from "react";
 import EndlessCard from "../../Components/EndlessCard/EndlessCard";
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
-import POKEMON_ICON from "../../Images/Pokemon.svg"
+import ENDLESS_CARD_IMG from "../../Images/endeless-card (1).jpg"
+import ENDLESS_CARD_IM2 from "../../Images/endeless-card (2).jpg"
+import ENDLESS_CARD_IM3 from "../../Images/endeless-card (3).jpg"
 
 const Opportunities = () => {
 
-    const endless_card_data  = [
+    const endless_card_data = [
         {
-            icon:POKEMON_ICON,
-            title:"Exclusive info & Release Guide",
-            text:""
-        }
-    ]
+            icon: ENDLESS_CARD_IMG,
+            title: " BA coming through as per 🙌🏾",
+            text: "",
+        },
+        {
+            icon: ENDLESS_CARD_IM2,
+            title: "Love boss👊🏾",
+            text: "",
+        },
+        {
+            icon: ENDLESS_CARD_IM2,
+            title: "Let’s get it!",
+            text: "",
+        },
+    ];
 
     return (
         <section id="opportunities">
             <SectionTitle text={"Endless Opportunities"} />
             <div className="container">
                 <div className="row row-cols-1 row-cols-lg-2">
-                    {[...new Array(6)].map((e, i) => (
+                    {endless_card_data.map((e, i) => (
                         <div className="col mb-4">
-                            <EndlessCard />
+                            <EndlessCard data={e} />
                         </div>
                     ))}
                 </div>

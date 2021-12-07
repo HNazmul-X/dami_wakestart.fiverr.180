@@ -1,6 +1,7 @@
 import { InlineIcon } from "@iconify/react";
 import React, { useState } from "react";
 import { NavLink,Outlet } from "react-router-dom";
+import logo from "../../Images/nav-logo.jpg"
 
 const Navbar = () => {
     const [IsContentShow, setIsContentShow] = useState(false);
@@ -11,7 +12,7 @@ const Navbar = () => {
                 <nav className="hnazmul-navbar">
                     <div className="hnazmul-navbar-container container-xxl">
                         <div className="hnazmul-nav-brand">
-                            <h4>Navbar brand</h4>
+                            <img style={{maxWidth:100}} src={logo} alt="" />
                         </div>
                         <div onClick={() => setIsContentShow(true)} className="hnazmul-nav-toggle-btn">
                             <button>

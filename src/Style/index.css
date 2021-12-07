@@ -303,6 +303,12 @@ body {
   border-radius: 15px;
   border: 2px solid #232532;
 }
+.endless-card .image_and_title img {
+  width: 50%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
 .endless-card:hover {
   background: #1d1e29;
   border-color: #383b50;
@@ -313,7 +319,7 @@ body {
 }
 
 .image-and-section {
-  padding: 2rem 0;
+  padding: 5rem 0;
 }
 @media screen and (max-width: 992px) {
   .image-and-section .image-and-section__image {
@@ -322,6 +328,9 @@ body {
 }
 .image-and-section .image-and-section__image img {
   width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 .image-and-section .image-and-section__wrapper .image-and-section__desc {
   padding: 1.3rem;
@@ -469,7 +478,7 @@ body {
   width: 43vw;
   position: absolute;
   min-width: 200px;
-  left: 75%;
+  right: 0;
   z-index: 5;
   bottom: 0px;
   padding: 20px;

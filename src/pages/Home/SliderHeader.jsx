@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../Components/navbar/Navbar";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { FreeMode, Navigation, Thumbs } from "swiper";
+import SwiperCore, { FreeMode,Autoplay, Navigation, Thumbs } from "swiper";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
@@ -12,10 +12,9 @@ import { InlineIcon } from "@iconify/react";
 import Tilt from "react-vanilla-tilt";
 
 // install Swiper modules
-SwiperCore.use([FreeMode, Navigation, Thumbs]);
+SwiperCore.use([FreeMode, Navigation,Autoplay, Thumbs]);
 
 const SliderHeader = () => {
-    const [thumbsSwiper, setThumbsSwiper] = useState(null);
     const sliderData = [
         {
             id: "ADKNDMD__DIED",
@@ -54,20 +53,18 @@ const SliderHeader = () => {
             img: SLIDER_IMG_TWO,
         },
     ];
-    const [activeData, setActiveData] = useState("");
     const [sliderPreviewData, setSliderPreviewData] = useState({ ...sliderData[0] });
 
-    useEffect(() => {}, [activeData]);
 
     return (
         <header id="sliderHeader">
             <Navbar />
             <div className="slider-header-carousel row m-0 w-100">
-                <div className="carousel-side col-12 p-0 col-lg-9">
-                    <div className="slider-preview" style={{ backgroundImage: `url(${sliderPreviewData.img})` }}>
+                <div className="carousel-side col-12 p-0 col-lg-12">
+                    <div className="slider-preview" style={{ backgroundImage: `url(${sliderPreviewData?.img})` }}>
                         <div className="mt-auto preview__text">
-                            <h1>{sliderPreviewData.title}</h1>
-                            <p className="col-12 col-sm-10 col-md-9 col-lg-7">{sliderPreviewData.text}</p>
+                            <h1>{sliderPreviewData?.title}</h1>
+                            <p className="col-12 col-sm-10 col-md-9 col-lg-7">{sliderPreviewData?.text}</p>
                             <button className="btn bg-red text-white btn-lg">Join now for free</button>
                         </div>
                         <div className="slider-area">
@@ -82,23 +79,36 @@ const SliderHeader = () => {
                                         slidesPerView: 2,
                                     },
                                 }}
+                                autoplay={{
+                                    delay:3000
+                                }}
+                                loop={true}
                                 className={"header-swiper"}>
                                 {sliderData.map((e, i) => (
                                     <SwiperSlide>
-                                        {({ isActive }) => (
-                                            <Tilt onClick={() =>  setSliderPreviewData(e)} className="p-0 m-0 w-100 bg-transparent">
-                                                <div style={{ backgroundImage: `url(${e.img})` }} className="header_slider-card d-flex align-items-center">
-                                                    <h6>{e.title}</h6>
-                                                </div>
-                                            </Tilt>
-                                        )}
+                                        {({ isActive }) => {
+                                            useEffect(()=> {
+                                                if(isActive){
+                                                    setSliderPreviewData(e)
+                                                    
+                                                }
+
+                                            },[isActive])
+                                            return (
+                                                <Tilt className="p-0 m-0 w-100 bg-transparent">
+                                                    <div style={{ backgroundImage: `url(${e?.img})` }} className="header_slider-card d-flex align-items-center">
+                                                        <h6>{e?.title}</h6>
+                                                    </div>
+                                                </Tilt>
+                                            );
+                                        }}
                                     </SwiperSlide>
                                 ))}
                             </Swiper>
                         </div>
                     </div>
                 </div>
-                <div className="advantage-text col-12 col-lg-3">
+                {/* <div className="advantage-text col-12 col-lg-3">
                     <div className="text-center py-5">
                         <h1>The Ultimate Advantage</h1>
                         <p className="text-blue-grey fw-500">Providing our members with the highest quality information, reselling tools, and more. Learn how to capitalize on the resell market.</p>
@@ -106,7 +116,7 @@ const SliderHeader = () => {
                             Become A member <InlineIcon icon="codicon:arrow-right" className="" />{" "}
                         </button>
                     </div>
-                </div>
+                </div> */}
             </div>
         </header>
     );

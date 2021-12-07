@@ -98,11 +98,13 @@ const Header = () => {
                 </div>
             </div>
             <div className="spacing">
-                {[...new Array(8)].map((e,i) => <div className={`${ i>5?"":"p-2"} p-md-3 p-lg-5`}></div>)}
+                {[...new Array(8)].map((e, i) => (
+                    <div className={`${i > 5 ? "" : "p-2"} p-md-3 p-lg-5`}></div>
+                ))}
             </div>
             {/* FASTEST MONITOR */}
             <div className="fastest-monitor">
-                <SectionTitle text={"Fastest Monitor"}/>
+                <SectionTitle text={"Fastest Monitor"} />
                 <div className=" ps-1 ps-md-3 ps-md-5">
                     <Swiper
                         slidesPerView={"auto"}
@@ -115,15 +117,17 @@ const Header = () => {
                         className="mySwiper">
                         {fastest_monitor_data.map((e, i) => (
                             <SwiperSlide className="fastest-monitor_card">
-                                <div className="fastest-monitor_card_wrapper">
-                                    <div className="image">
-                                        <img src={e.image} alt="" />
+                                {({ isActive }) => (
+                                    <div className="fastest-monitor_card_wrapper">
+                                        <div className="image">
+                                            <img src={e.image} alt="" />
+                                        </div>
+                                        <div className="text-and-title">
+                                            <h3 className="mb-0">{e.title}{isActive?"active":""}</h3>
+                                            <p>{e.text}</p>
+                                        </div>
                                     </div>
-                                    <div className="text-and-title">
-                                        <h3 className="mb-0">{e.title}</h3>
-                                        <p>{e.text}</p>
-                                    </div>
-                                </div>
+                                )}
                             </SwiperSlide>
                         ))}
                     </Swiper>

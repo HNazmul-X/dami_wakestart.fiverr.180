@@ -1,4 +1,5 @@
 $white: #ffffff;
+$red:#f34545;
 $muted-black: #232532;
 $purple: #9a75ff;
 $purple-2: #8250ff;
@@ -17,9 +18,10 @@ $body-black:#1a1b25;
     --black:#{$black};
     --body-black:#{$body-black};
     --blue-grey:#{$blue-gray};
+    --red:#{$red};
 }
 
-$var-list: white, muted-black, blue-grey, purple, body-black, purple-2, purple1-to-purple2,black;
+$var-list: white, muted-black, blue-grey,red, purple, body-black, purple-2, purple1-to-purple2,black;
 
 
 @each $var in $var-list {
@@ -41,10 +43,8 @@ $var-list: white, muted-black, blue-grey, purple, body-black, purple-2, purple1-
     box-shadow: $btn-shadow;
 }
 
-*{
-    color: $white;
-}
 
 body{
+    color: $white;
     overflow-x: hidden;
 }

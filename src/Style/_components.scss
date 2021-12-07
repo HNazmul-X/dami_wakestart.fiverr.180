@@ -158,7 +158,7 @@
 
 #footer {
     height: 60vh;
-    background: url("../Images/FOOTER_BG.jpg");
+    background: url("../Images/FOOTER_BG.jpg") no-repeat top center / cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,3 +167,45 @@
         font-weight: 500;
     }
 }
+
+.header_slider-card{
+    padding: 2rem;
+    height: 150px;
+    border-radius: 20px;
+    background: top / cover;
+    background-color: rgba(0, 0, 0, 0.459);
+    background-blend-mode: soft-light;
+    user-select: none;
+    cursor: pointer;
+    color: white;
+    box-shadow: 5px 5px 20px black;
+}
+
+.membership-small-card{
+    max-width: 400px;
+    box-shadow: 10px 10px 40px transparentize($red,0.7);
+    .title{
+        color:darken($color: $blue-gray, $amount: 10);
+        font-weight: 600;
+    }
+
+    .price{
+        font-weight: bold;
+        margin-top: 1rem;
+        font-size: 22px;
+    }
+    .validity{
+        color: lighten($color: $muted-black, $amount: 50);
+        margin-top: 1.9rem;
+        margin-bottom: 3rem;
+        font-size: 15px;
+    }
+    .terms, .terms a{
+        color:lighten($color: $muted-black, $amount: 50)
+        ;margin-top: 2rem;
+        font-size: 12px ;
+        text-align: center;
+    }
+
+}
+

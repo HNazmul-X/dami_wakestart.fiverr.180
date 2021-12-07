@@ -6,10 +6,10 @@ const Footer = () => {
         <footer id="footer">
             <div className="container">
                 <div className="row">
-                    <div className="col-6 col-md-6">
+                    <div className="col-12 col-md-6 text-center">
                         <p>&copy; Restock World</p>
                     </div>
-                    <div className="col-6 col-md-5 ms-auto justify-content-between d-flex">
+                    <div className="col-12 col-md-5 ms-auto justify-content-between d-flex flex-column align-items-center">
                         {[
                             {
                                 text: "Terms and Condition",

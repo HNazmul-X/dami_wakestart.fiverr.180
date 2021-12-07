@@ -8,6 +8,7 @@
   --black:black;
   --body-black:#1a1b25;
   --blue-grey:#7c7fa0;
+  --red:#f34545;
 }
 
 .text-white {
@@ -32,6 +33,14 @@
 
 .bg-blue-grey {
   background: var(--blue-grey);
+}
+
+.text-red {
+  color: var(--red);
+}
+
+.bg-red {
+  background: var(--red);
 }
 
 .text-purple {
@@ -114,11 +123,8 @@
   box-shadow: #0e0a1f40 0px 16px 49px;
 }
 
-* {
-  color: #ffffff;
-}
-
 body {
+  color: #ffffff;
   overflow-x: hidden;
 }
 
@@ -131,6 +137,7 @@ body {
   --black:black;
   --body-black:#1a1b25;
   --blue-grey:#7c7fa0;
+  --red:#f34545;
 }
 
 .text-white {
@@ -155,6 +162,14 @@ body {
 
 .bg-blue-grey {
   background: var(--blue-grey);
+}
+
+.text-red {
+  color: var(--red);
+}
+
+.bg-red {
+  background: var(--red);
 }
 
 .text-purple {
@@ -237,11 +252,8 @@ body {
   box-shadow: #0e0a1f40 0px 16px 49px;
 }
 
-* {
-  color: #ffffff;
-}
-
 body {
+  color: #ffffff;
   overflow-x: hidden;
 }
 
@@ -387,7 +399,7 @@ body {
 
 #footer {
   height: 60vh;
-  background: url("../Images/FOOTER_BG.jpg");
+  background: url("../Images/FOOTER_BG.jpg") no-repeat top center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -395,6 +407,45 @@ body {
 #footer p {
   margin-bottom: 0px;
   font-weight: 500;
+}
+
+.header_slider-card {
+  padding: 2rem;
+  height: 150px;
+  border-radius: 20px;
+  background: top/cover;
+  background-color: rgba(0, 0, 0, 0.459);
+  background-blend-mode: soft-light;
+  user-select: none;
+  cursor: pointer;
+  color: white;
+  box-shadow: 5px 5px 20px black;
+}
+
+.membership-small-card {
+  max-width: 400px;
+  box-shadow: 10px 10px 40px rgba(243, 69, 69, 0.3);
+}
+.membership-small-card .title {
+  color: #626587;
+  font-weight: 600;
+}
+.membership-small-card .price {
+  font-weight: bold;
+  margin-top: 1rem;
+  font-size: 22px;
+}
+.membership-small-card .validity {
+  color: #9b9fb9;
+  margin-top: 1.9rem;
+  margin-bottom: 3rem;
+  font-size: 15px;
+}
+.membership-small-card .terms, .membership-small-card .terms a {
+  color: #9b9fb9;
+  margin-top: 2rem;
+  font-size: 12px;
+  text-align: center;
 }
 
 * {
@@ -414,6 +465,119 @@ body {
   padding: 4rem 0px;
 }
 
+#sliderHeader .slider-area {
+  width: 43vw;
+  position: absolute;
+  min-width: 200px;
+  left: 75%;
+  z-index: 5;
+  bottom: 0px;
+  padding: 20px;
+  max-width: 500px;
+}
+#sliderHeader .slider-area .header-swiper {
+  user-select: none;
+}
+@media screen and (max-width: 992px) {
+  #sliderHeader .slider-area {
+    right: 0px;
+    left: auto;
+    bottom: 0px;
+    position: static;
+    width: 100%;
+    margin: auto;
+  }
+  #sliderHeader .slider-area .header_slider-card {
+    height: 20px;
+    border-radius: 10px;
+  }
+  #sliderHeader .slider-area .header_slider-card h6 {
+    font-size: 3vw;
+  }
+}
+
+.slider-header-carousel {
+  position: relative;
+  z-index: 1;
+}
+.slider-header-carousel .carousel-side {
+  height: 100%;
+}
+.slider-header-carousel .carousel-side .slider-preview {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.623);
+  background-blend-mode: soft-light;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top left;
+}
+.slider-header-carousel .carousel-side .slider-preview .preview__text {
+  position: absolute;
+  bottom: 10%;
+  padding: 30px;
+}
+.slider-header-carousel .carousel-side .slider-preview .preview__text h1 {
+  font-size: 50px;
+  color: #f34545;
+  font-weight: 800;
+}
+.slider-header-carousel .carousel-side .slider-preview .preview__text p {
+  font-size: 20px;
+}
+@media screen and (max-width: 992px) {
+  .slider-header-carousel .carousel-side .slider-preview .preview__text {
+    position: static;
+  }
+}
+.slider-header-carousel .advantage-text button {
+  color: red;
+}
+.slider-header-carousel .advantage-text button .iconify {
+  color: red !important;
+}
+
+#all_membership .membership__large {
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+#all_membership .membership__large .large__card {
+  position: relative;
+}
+#all_membership .membership__large .large__card .featured-list li {
+  font-weight: 500;
+  color: #f34545;
+  list-style: none;
+  padding: 7px 0px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+#all_membership .membership__large .large__card .featured-list li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: url("https://api.iconify.design/eva/checkmark-circle-2-fill.svg?color=red") no-repeat center center/contain;
+  left: -30px;
+}
+#all_membership .membership__large .large__card .corner-budge {
+  position: absolute;
+  top: 5px;
+  right: -30px;
+  transform: rotate(37deg);
+}
+@media screen and (max-width: 450px) {
+  #all_membership .membership__large .large__card {
+    overflow: hidden;
+  }
+}
+
 :root {
   --white: #ffffff;
   --muted-black: #232532;
@@ -423,6 +587,7 @@ body {
   --black:black;
   --body-black:#1a1b25;
   --blue-grey:#7c7fa0;
+  --red:#f34545;
 }
 
 .text-white {
@@ -447,6 +612,14 @@ body {
 
 .bg-blue-grey {
   background: var(--blue-grey);
+}
+
+.text-red {
+  color: var(--red);
+}
+
+.bg-red {
+  background: var(--red);
 }
 
 .text-purple {
@@ -529,11 +702,8 @@ body {
   box-shadow: #0e0a1f40 0px 16px 49px;
 }
 
-* {
-  color: #ffffff;
-}
-
 body {
+  color: #ffffff;
   overflow-x: hidden;
 }
 
@@ -558,6 +728,7 @@ body {
   display: none;
 }
 .hnazmul-navbar .hnazmul-navbar-container .hnazmul-nav-toggle-btn button {
+  color: #ffffff;
   border: none;
   background: transparent;
 }
